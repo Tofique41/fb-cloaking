@@ -12,3 +12,7 @@ export function middleware(request: NextRequest) {
 
   return NextResponse.rewrite(new URL('/real', request.url));
 }
+
+export const config = {
+  matcher: '/', // Apply middleware to the homepage and any other routes you need
+};
